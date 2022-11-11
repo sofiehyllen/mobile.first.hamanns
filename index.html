@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Hamanns, Emma 1990</title>
+
+    <script src="https://kit.fontawesome.com/a5ca7cf292.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="backgroundimage" >
+        <nav>
+            <div>
+               <a href="#"> <img src="images/logo.stor.png" alt="logo" height="50px" width="auto"></a> 
+            </div>
+            <div class="navbar-left" >
+                <a href="#">Menu & takeaway</a>
+                <a href="#">Events</a>
+                <a href="#">Shop</a>     
+            </div>
+
+            <div class="navbar-right" >
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a id="book-button" href="#">Book Bord</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <section class="slideshow_sectionINDEX">
+
+        <div class="w3-content">
+        
+          <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+            <img src="images/slide3.jpg" alt="slide1">
+          </div>
+        
+          <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+            <img src="images/slide2.jpg" alt="slide2">
+          </div>
+        
+          <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+            <img src="images/slide3.jpg" alt="slide3">
+          </div>
+        
+        </div>
+        
+        <div>
+        <script>
+        var slideIndex = 0;
+        carousel();
+        
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none"; 
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1} 
+        x[slideIndex-1].style.display = "block"; 
+        setTimeout(carousel, 5000); 
+        }
+        </script>
+        </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+    <main>
+        <h1>Main</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+    </main>
+
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="column-one">
+                <h1>Kontakt</h1>
+                <p>Gammel Munkegade 5 st.</p>
+                <p>8000 Aarhus</p>
+                <br>
+                <p>Åbningstider</p>
+                <p>Mandag-fredag: 09:00-18:00</p>
+                <p>Lørdag: 09:30-18:00</p>
+                <p>Søndag: 09:30-18:00</p>
+                <br>
+                <p>Mail: emma@hamanns1990.dk</p>
+                <p>Tlf.: 93 99 07 55</p>
+            </div>
+
+            <div class="column-two">
+                <h1>Tilmeld dig vores nyhedsbrev</h1>
+                <form>
+                    <input type="email" placeholder="Din e-mail" required>
+                    <br>
+                    <button type="submit">Tilmeld</button>
+                </form>
+                <div class="social-icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                </div>
+            </div>
+
+            <div class="column-three">
+                <h1>Info</h1>
+                <a href="#">Smileyrapport</a>
+                <a href="#">Handelsbetingelser</a>
+                <a href="#">Leveringsinformation</a>
+                <a href="#">Ombytning og returnering</a>
+                <a href="#">Servicevilkår</a>
+                <a href="#">Refusionspolitik</a>
+                <a href="#">Job</a>
+            </div>
+
+
+
+
+        </div>
+    </footer>
+</body>

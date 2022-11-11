@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+header{
+    height: 800px;
+}
+
+
+nav{
+    width: 100%;
+    padding-top: 10px;
+}
+
+nav img{
+    margin-left: 10px;
+    display: block;
+    float: left;
+}
+
+nav div a{
+    display: block;
+    float: left;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+nav div i{
+    color: white;
+}
+
+.navbar-left{
+    margin-top: 16px;
+}
+
+.navbar-right{
+    float: right;
+}
+
+#book-button{
+    border: 1px solid red;
+}
+
+
+
+
+
+.backgroundimage{
+    background-image: url(images/forside.baggrund.jpg);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+.slideshow_sectionINDEX{
+    height: 800px;
+    
+    }
+
+  .slideshow_sectionINDEX img{
+      display: flex;
+      
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----FOOTER----*/
+.footer{
+    width: 100%;
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(146,150,129);
+    position: relative;
+    bottom: 0;
+
+}
+
+.footer .column-two{
+    text-align: center;
+}
+
+/*----FOOTER TEXT----*/
+.footer p{
+    line-height: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer h1{
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer a{
+    display: block;
+    color: white;
+    line-height: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*----NYHEDSBREV----*/
+form input{
+    width: 300px;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-bottom: 40px;
+    text-align: left;
+    background-color: white;
+  }
+
+/*----TILMELDNINGSKNAP----*/
+  form button{
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px 23px;
+    cursor: pointer;
+  }
+
+  /*----SOCIALE MEDIER IKONER----*/
+.social-icons{
+    margin-top: 50px;
+  }
+  
+  .social-icons i{
+    font-size: 30px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
