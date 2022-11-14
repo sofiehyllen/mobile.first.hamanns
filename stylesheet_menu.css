@@ -1,0 +1,49 @@
+.overskrift{
+    text-align: center;
+    margin-top: 100px;
+    height: 100px;
+}
+
+.overskrift h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.menu div{
+    width: 600px;
+    padding: 30px;
+    
+}
+
+.menu img{
+    float: left;
+    width: 25%;
+    margin-right: 10px;
+}
+
+.menu span{
+    float: right;
+}
+
+.menu{
+    font-family: 'Montserrat', sans-serif;
+}
+
+main div{
+    height: 150px;
+}
+
+.menu h3{
+    margin-bottom: 0px;
+}
+
+body{
+    background-color: #929c8b;
+    color: white;
+}
