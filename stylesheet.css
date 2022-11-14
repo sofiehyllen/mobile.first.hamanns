@@ -6,69 +6,161 @@
     list-style: none;
 }
 
-header{
-    height: 800px;
-}
 
 
+/*----NAVIGATIONSBAR----*/
 nav{
-    width: 100%;
-    padding-top: 10px;
+  width: 100%;
+  padding-top: 10px;
+  position: fixed;
 }
 
 nav img{
-    margin-left: 10px;
-    display: block;
-    float: left;
+  margin-left: 10px;
+  display: block;
+  float: left;
 }
 
 nav div a{
-    display: block;
-    float: left;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    margin-right: 20px;
-    margin-left: 20px;
+  display: block;
+  float: left;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 nav div i{
-    color: white;
+  color: white;
 }
 
 .navbar-left{
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
 .navbar-right{
-    float: right;
+  float: right;
 }
 
+
+/*----DROPDOWN I NAV----*/
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  background-color: inherit;
+  
+
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 0;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  margin-left: -1px;
+  margin-top: 10px;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/*-----BOOK BORD KNAP I NAV----*/
 #book-button{
-    border: 1px solid red;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 3px 8px 3px 8px;
+  transition: all .2s ease-in-out;
+}
+
+#book-button:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.2);
 }
 
 
 
 
 
-.backgroundimage{
-    background-image: url(images/forside.baggrund.jpg);
-    background-repeat: no-repeat;
+
+
+/*----FORSIDE BAGGRUND----*/
+.forside-banner{
+  width: 100%;
+  display: flex;
+}
+
+#forside-baggrund{
+  z-index: -2;
+}
+
+#logo{
+  position: absolute;
+  top: 150px;
+  left: 160px;
+  z-index: -1;
+}
+
+#book-button-forside a{
+  position: absolute;
+  top: 520px;
+  left: 220px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border-bottom: 1px white solid;
+  font-size: 25px;
+}
+
+#book-button-forside :hover{
+  color: aqua;
 }
 
 
 
 
 
+
+
+/*----SLIDESHOW----*/
 .slideshow_sectionINDEX{
-    height: 800px;
-    
-    }
+  height: 800px;
+  display: flex;
+  width: 50%;
+  overflow: hidden;
+  
+}
 
-  .slideshow_sectionINDEX img{
-      display: flex;
-      
-    }
+.slideshow_sectionINDEX img{
+  display: flex; 
+}
+
 
 
 
@@ -90,72 +182,133 @@ nav div i{
 
 /*----FOOTER----*/
 .footer{
-    width: 100%;
-    display: flex;
-    padding: 40px;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    background-color: rgb(146,150,129);
-    position: relative;
-    bottom: 0;
-
+  width: 100%;
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(146,150,129);
+  position: relative;
+  bottom: 0;
 }
 
 .footer .column-two{
-    text-align: center;
+  text-align: center;
 }
 
 /*----FOOTER TEXT----*/
 .footer p{
-    line-height: 22px;
-    font-family: 'Montserrat', sans-serif;
+  line-height: 22px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .footer h1{
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .footer a{
-    display: block;
-    color: white;
-    line-height: 22px;
-    font-family: 'Montserrat', sans-serif;
+  display: block;
+  color: white;
+  line-height: 22px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*----NYHEDSBREV----*/
 form input{
-    width: 300px;
-    height: 35px;
-    padding-left: 10px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    margin-bottom: 40px;
-    text-align: left;
-    background-color: white;
-  }
+  width: 300px;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 40px;
+  text-align: left;
+  background-color: white;
+}
 
 /*----TILMELDNINGSKNAP----*/
-  form button{
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 8px 23px;
-    cursor: pointer;
-  }
+form button{
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 8px 23px;
+  cursor: pointer;
+}
 
   /*----SOCIALE MEDIER IKONER----*/
 .social-icons{
-    margin-top: 50px;
-  }
+  margin-top: 50px;
+}
   
-  .social-icons i{
-    font-size: 30px;
-    cursor: pointer;
-    padding-left: 10px;
-    padding-right: 10px;
+.social-icons i{
+  font-size: 30px;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+
+/*----ANIMATIONER & TRANSITIONS----*/
+/*----NAV ANIMATION----*/
+.puff-in-center {
+	animation: puff-in-center 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+ @keyframes puff-in-center {
+  0% {
+    transform: scale(1);
+    filter: blur(4px);
+    opacity: 0;
   }
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+/*----DROPDOWN ANIMATION----*/
+ @keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.50s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
