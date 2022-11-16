@@ -1,6 +1,5 @@
 
 
-
 *{
     margin: 0;
     padding: 0;
@@ -92,7 +91,7 @@ nav div i{
 }
 
 #book-button:hover{
-  background-color: #ffffff33;
+  background-color: rgba(69, 71, 51, 0.127);
   transform: scale(1.2);
 }
 
@@ -128,54 +127,51 @@ nav div i{
 
 
 /* OVERSKRIFT EVENTS*/
-.overskrift{
+.overskrift h1{
     width: 100%;
-    padding-left: 32%;
-    margin-top: 0px;}
-
-  .overskrift h1{
-    color: #464a38;
-    margin-bottom: 20px;
-    position: relative;
-    width: 500px;
-    text-align: center;
-    text-transform: uppercase;
+    color: #2e3903;
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
-    letter-spacing: -1px;}
+    border: 1px solid black;
+    text-align: center;
+  }
+
 
 
 
 /* CARDSCONTAINER - EVENTS */
-
 .cardscontainer{
     display:flex;
     justify-content:space-around;
     width:100%;
     flex-wrap:wrap;
-    margin-top: 0px;
+    
     margin-bottom: 50px;
-    height: 700px;}
+    height: 700px;
+  }
 
 .cardscontainer div{
-    width:29%;
-    padding-bottom:5px;
-    border:2px solid white;
+    width:30%;
     border-radius:20px;
     position: relative;
     font-family: 'Montserrat', sans-serif;
-    text-transform:uppercase;
-    text-align:center;}
+    text-align:center;
+}
 
-.cardscontainer div p, .cardscontainer div h2{
-    margin:15px;
-    color: rgb(255, 255, 255);}
 
 .cardscontainer div h2{
-    font-size: 35px;}
+    font-size: 35px;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
 
 .cardscontainer div p{
-    font-size: 20px;}
+    font-size: 20px;
+    color: white;
+    padding-bottom: 20px;
+  }
 
 .cardscontainer div:first-child, .cardscontainer div:last-child{
     background-color: #c49a95;}
@@ -183,11 +179,9 @@ nav div i{
 .cardscontainer div:nth-child(2){
     background-color: #856e6b;}
 
-.cardscontainer div:nth-child(2) h2{
-    margin-top: 17px;}
 
-.cardscontainer div:nth-child(2) img{
-    margin-top: 30px;}
+
+
 
 .cardscontainer img{
     margin-top: 40px;
@@ -217,7 +211,9 @@ nav div i{
     margin-left: 60px;
     margin-top: 150px;
     height: 400px;
-    color: #464a38;}
+    color: #464a38;
+    border: 1px solid green;
+  }
 
 .cardsection div{
   width:50%;
@@ -264,37 +260,27 @@ hr{
 
 
 /* OVERSKRIFT INSTAGRAM */
-.overskrift_instagram{
-    width: 100%;
-    margin-top: 100px;
-    padding-left: 32%;
-    margin-top: 0px;}
-
   .overskrift_instagram h1{
-    color: #464a38;
-    margin-bottom: 20px;
-    position: relative;
-    width: 500px;
-    text-align: center;
-    text-transform: uppercase;
+    width: 100%;
+    color: #2e3903;
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    letter-spacing: -1px;}
+    font-size: 40px;
+    border: 1px solid black;
+    text-align: center;
+  }
 
 
 /* INSTAGRAM SECTION */
 .instagram_et, .instagram_to, .instagram_tre{
     display: flex;
     justify-content: space-around;
-    gap: 10px;
-
-    margin-bottom: 10px;
-    margin-right: 30px;
-    margin-left: 30px;}
+    overflow: hidden;
+    }
 
  .instagram_et > div, .instagram_to > div, .instagram_tre > div{
     width: 33%;
     height: 330px;
+    margin: 10px;
     background-color: #eeeee1;
     position: relative;}
 
@@ -345,26 +331,17 @@ hr{
 
 
 /* OVERSKRIFT - SHOP */
-
-.overskrift{
-    width: 100%;
-    padding-left: 33%;
-    margin-top: 100px;}
-    
   .overskrift h1{
-    color: #464a38;
-    margin-bottom: 20px;
-    position: relative;
-    width: 500px;
-    text-align: center;
-    text-transform: uppercase;
+    width: 100%;
+    color: #2e3903;
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
-    letter-spacing: -1px;}
+    border: 1px solid black;
+    text-align: center;
+  }
 
 
 /* CARDSCONTAINER - SHOP */
-
 .cardscontainer_shop{
     display:flex;
     justify-content:space-around;
@@ -764,6 +741,112 @@ form button:hover{
     transform: none;
   }
   
+
+
+
+
+
+/*----ANIMATIONER & TRANSITIONS----*/
+/*----NAV ANIMATION----*/
+.puff-in-center {
+	animation: puff-in-center 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+ @keyframes puff-in-center {
+  0% {
+    transform: scale(1);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+/*----DROPDOWN ANIMATION----*/
+ @keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*----UNDERLINE ANIMATION LYS----*/
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.50s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*----UNDERLINE ANIMATION MØRK----*/
+.hover-underline-animation-dark {
+  display: inline-block;
+  position: relative;
+  color: white
+}
+
+.hover-underline-animation-dark:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #464a38;
+  transform-origin: bottom right;
+  transition: transform 0.50s ease-out;
+}
+  
+.hover-underline-animation-dark:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*----BOOK BORD----*/
+ @keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.7em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
 
 
 
