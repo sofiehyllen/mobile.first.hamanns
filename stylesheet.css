@@ -1,18 +1,17 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
-
-
 
 /*----NAVIGATIONSBAR----*/
 nav{
   width: 100%;
   padding-top: 25px;
   position: fixed;
+  z-index: 3;
 }
 
 nav img{
@@ -45,12 +44,10 @@ nav div i{
 #nav-mobile i{
   text-align: end;
   font-size: 40px;
-  
 }
 
 
 /*----DROPDOWN I NAV----*/
-
 .dropdown {
   float: left;
   overflow: hidden;
@@ -63,8 +60,6 @@ nav div i{
   color: white;
   font-family: 'Montserrat', sans-serif;
   background-color: inherit;
-  
-
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -77,7 +72,6 @@ nav div i{
   min-width: 160px;
   z-index: 0;
   animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-
 }
 
 .dropdown-content a {
@@ -89,8 +83,6 @@ nav div i{
   margin-left: -1px;
   margin-top: 10px;
 }
-
-
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -117,33 +109,28 @@ nav div i{
 
 
 
-/*----FORSIDE BAGGRUND----*/
+/*----FORSIDE BANNER----*/
 .forside-banner{
   width: 100%;
   display: flex;
-}
-
-#forside-baggrund{
-  z-index: -2;
 }
 
 #logo{
   position: absolute;
   top: 150px;
   left: 160px;
-  z-index: -1;
-  
 }
 
 #book-button-forside a{
   position: absolute;
-  top: 520px;
+  top: 530px;
   left: 210px;
+
   color: white;
   font-family: 'Montserrat', sans-serif;
-  border-bottom: 1px white solid;
-  padding: 0px 10px 0px 10px;
   font-size: 25px;
+  border-bottom: 1px white solid;
+  
   transition: all .2s ease-in-out;
   animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
@@ -152,26 +139,223 @@ nav div i{
   transform: scale(1.1);
 }
 
-
-
-
-
-
-
-/*----SLIDESHOW----*/
+/*----SLIDESHOW I FORSIDEBANNER----*/
 .slideshow_sectionINDEX{
   height: 800px;
   display: flex;
   width: 50%;
   overflow: hidden;
-  
 }
 
 .slideshow_sectionINDEX img{
   display: flex; 
 }
 
+/*----BAGGRUNDSFARVE----*/
+main{
+  background-color: #eeeee1;
+}
 
+/*---OM OS SEKTIONEN---*/
+.cardsection{
+  display:flex;
+  justify-content:space-around;
+  
+  height: 330px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  
+}
+
+.cardsection img{
+  padding-left: 35px;
+  padding-top: 10px;
+}
+
+.cardsection div{
+width:100%;
+font-family: 'Montserrat', sans-serif;
+color: #464a38;
+}
+
+
+
+.cardsection h1{
+  font-size: 40px;
+}
+
+.cardsection p{
+  text-align: left;
+  padding-top: 30px;
+  padding-right: 20px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+
+
+/*----MENU KORT----*/
+.cardscontainer{
+  display:flex;
+  justify-content:space-around;
+  width:100%;
+  height: 600px;
+  position: relative;
+}
+
+.cardscontainer div{
+width:30%;
+position: relative;
+border-radius:20px;
+font-family: 'Montserrat', sans-serif;
+text-align:center;
+background-color: #c49a95;
+}
+
+/*----BILLEDE I MENUKORT----*/
+.cardscontainer img{
+margin-top: 40px;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+/*----TEKST I MENUKORT---*/
+.cardscontainer div h2{
+  color: white;
+  font-size: 35px;
+}
+
+.cardscontainer div h5{
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.cardscontainer p{
+  color: white;
+  padding: 20px 40px 0px 40px;
+}
+
+.cardscontainer a{
+  color: white;
+  background-color: #856e6b;
+  padding: 8px 15px 8px 15px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 115px;
+  transition: all .2s ease-in-out;
+}
+
+.cardscontainer div:nth-child(2){
+  background-color: #856e6b;
+}
+
+.cardscontainer div:nth-child(2) a{
+  background-color: #c49a95;
+}
+
+.cardscontainer a:hover{
+  transform: scale(1.2);
+  
+}
+
+
+
+
+
+
+
+ /* KORT NYHEDER RÆKKE 1 */
+ .card_nyheder_et, .card_nyheder_to{
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 15px;
+  font-family: 'Roboto Slab', serif;}
+
+.card_nyheder_et > div, .card_nyheder_to > div{
+  width: 33%;
+  height: 400px;
+  background-color: rgb(139, 139, 139);
+  border-radius: 10px;
+  font-family: 'Roboto Slab', serif;
+  text-transform:uppercase;
+  position: relative;}
+
+.card_nyheder_et > div p, .card_nyheder_to > div p{
+  position:absolute;
+  bottom:40px;
+  margin-left: 10px;
+  font-family: 'Roboto Slab', serif;
+  text-transform:uppercase;}
+
+.card_nyheder_et > div h1, .card_nyheder_to > div h1{
+  margin-left: 10px;
+  font-family: 'Roboto Slab', serif;
+  text-transform:uppercase;}
+
+.card_nyheder_et > div h3, .card_nyheder_to > div h3{
+  margin-left: 10px;
+  font-family: 'Roboto Slab', serif;
+  text-transform:uppercase;}
+
+.card_nyheder_et > div:first-child{
+  width: 60%;}
+
+
+  
+
+/* INSTAGRAM */
+.instagram_et, .instagram_to, .instagram_tre{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  overflow: hidden;
+  
+  }
+
+.instagram_et > div, .instagram_to > div, .instagram_tre > div{
+   width: 33%;
+   height: 330px;
+   background-color: #eeeee1;
+   position: relative;
+   margin: 10px;
+  }
+
+/* INSTAGRAM RÆKKE 1 */
+.instagram_et > div:first-child{
+   width: 40%;}
+
+.instagram_et{margin-top: 20px;}
+
+
+
+
+/* INSTAGRAM RÆKKE 2 */
+ .instagram_to > div{
+    width: 33%;
+    background-color: #eeeee1;
+    position: relative;}
+
+ .instagram_to > div:nth-child(2){
+    width: 40%;}
+
+   .instagram_to > div:last-child{
+      margin-top: 40px;}
+
+
+/* INSTAGRAM RÆKKE 3 */
+.instagram_tre{
+  margin-top: -30px;
+}
+
+.instagram_tre > div{
+  margin-bottom: 100px;
+}
+
+ .instagram_tre > div:last-child{
+    width: 40%;}
 
 
 
@@ -536,7 +720,9 @@ form button:hover{
     display: none;
   }
 
+
 }
+
 
 
 
@@ -556,12 +742,10 @@ form button:hover{
 
 #forside-baggrund img{
   width: 100%;
-  height: 600px;
+  height: 700px;
 }
 
-#book-button-forside a{
-  text-align: center;
-}
+
 
 .slideshow_sectionINDEX{
   width: 100%;
@@ -594,6 +778,22 @@ form button:hover{
 
 #column-three{
   text-align: center;
+}
+
+.cardsection{
+  flex-direction: column;
+  margin-top: 250px;
+}
+
+.cardsection p{
+  margin-bottom: 170px;
+}
+
+.cardscontainer{
+  flex-direction: column;
+  align-items: center;
+ 
+
 }
 
 
