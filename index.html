@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <title>Hamanns, Emma 1990</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Hamann</title>
 
     <script src="https://kit.fontawesome.com/a5ca7cf292.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 
+
+</head>
 <body>
+
     <header>
         <nav class="puff-in-center" >
             <div>
-               <a href="#"> <img src="images/logo.stor.png" alt="logo" height="50px" width="auto"></a> 
+               <a href="#"> <img src="Images/logo.png" alt="logo" height="50px" width="auto"></a> 
             </div>
-            <div class="navbar-left" >
+            <div class="navbar-left">
+
+
                 <div class="dropdown">
                     <button class="dropbtn">Menu & takeaway</button>
 
                     <div class="dropdown-content">
                       <a class="hover-underline-animation" href="#">Morgenmad</a>
                       <a class="hover-underline-animation" href="#">Frokost</a>
-                      <a class="hover-underline-animation" href="#">Kage & drikke</a>
+                      <a class="hover-underline-animation" href="#">Kager & drikke</a>
 
                     </div>
                   </div> 
@@ -79,210 +86,338 @@
         </nav>
     </header>
 
-    <main>
-        <section class="forside-banner" >
-            <div id="forside-baggrund">
-            <img src="images/forside.baggrund.jpg" alt="Forside">
-            </div>
 
-            <div id="logo" >
-                <img src="images/logo.stor.png" alt="logo" height="300px" width="auto">
-            </div>
 
-            <div id="book-button-forside" >
-                <a href="#">
-                <h1>Book bord</h1>
-                </a>
-            </div>
 
-            
-            <div class="slideshow_sectionINDEX">
-                <div>
-                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
-                    <img src="images/slide1.jpg" alt="slide1">
-                </div>
-                
-                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
-                    <img src="images/slide2.jpg" alt="slide2">
-                </div>
-                
-                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
-                    <img src="images/slide3.jpg" alt="slide3">
-                </div>
-                
-                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
-                    <img src="images/slide4.jpg" alt="slide4">
-                </div>
 
-                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
-                    <img src="images/slide5.jpg" alt="slide5">
-                </div>
-
-                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
-                    <img src="images/slide6.jpg" alt="slide6">
-                </div>
-                
-                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
-                    <img src="images/slide7.jpg" alt="slide7">
-                </div>
-
-                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
-                    <img src="images/slide8.jpg" alt="slide8">
-                </div>
-            </div>
-            
-            <div>
-                <script>
-                var slideIndex = 0;
-                carousel();
-                
-                function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none"; 
-                }
-                slideIndex++;
-                if (slideIndex > x.length) {slideIndex = 1} 
-                x[slideIndex-1].style.display = "block"; 
-                setTimeout(carousel, 5000); 
-                }
-                </script>
-            </div>
-        </div>
-        </section>
-
-        <section class="cardsection">
-            <div><img src="images/om.os.jpg" alt="om os"></div>
-            <div>
-                <h1>Om os</h1>
-                <p>
-                    Gennem 30 somre har jeg forelsket mig i alverdens smage og samlet det hele på dette menukort. 
-                    Noget af maden er fra min barndom og tilberedt som min bedstemor gjorde det, andet er fra mit voksne liv - 
-                    fælles for alle retterne er, at det er smage, jeg ikke kan undvære i mit liv.  
-                    Ingen ved hvad fremtiden bringer, men min mad kan jeg stole på - og jeg glæder mig til at servere den for dig.  
-                    Jeg er altid åben overfor at forelske mig i nye sammensætninger og kulinariske udformninger, så menukortet er naturligt organisk foranderligt.
-                    Jeg glæder mig til at byde jer velkommen.
-                </p>
-            </div>
-        </section>
-  
+    <section class="menuogtakeaway">
+        <div>
+            <div class="containertext" >
+            <div class="containerimage">
+            <img src="Images/mad.png" alt="Billede af morgenmad"> 
+            </div>  
         
-        <section class="cardscontainer">
-            <div>
-                <img src="images/morgenmad.png" alt="morgenmad">
-                <h2>Morgenmad</h2>
-                <h5>Alle dage: 09:00 - 17:00</h5>
-                <p>Prøv vores morgenmad med små fine detaljer, nye smage og smagskombinationer og en anretning som skiller sig ud fra mængden.</p>
-                <a href="#">Se menukortet</a>
+            <h1>Menu & takeaway</h1>
+            <p>
+            Jeg gør en dyd ud af at lave min morgenmad, frokost og kage lidt anderledes,
+            end det du får til dagligt derhjemme. Jeg prøver på at holde menukortet så enkelt og simpelt som muligt, 
+            men samtidig gøre meget ud af de små detaljer, nye smage og smagskombina-tioner. 
+            Menukortet bliver løbende udskiftet alt efter sæson, og du kan både vælge, at nyde maden i caféen eller snuppe den med hjem. 
+            </p> 
             </div>
+         </div>
+
+    </section>
+
+<main> 
+    
+    <div class="overskrift">
+    <h1>Morgenmad</h1>
+    </div>
+
+
+    <section class="menu">
+
+        <div>
+            <img src="Images/morgenmad9.png" alt="birchermysli">
+            <h3>Soya bircher muysli <span>109,-</span></h3>
+            <hr>
+            <p>Lavet på kerner og nødder - hertil lemon soya-</p>
+            <p>yoghurt, karamel/kakao-knas, syltede</p> 
+            <p>mandariner og lemon</p>
+        </div>
+
+        <div class="speltbolle">
+            <img src="Images/morgenmad10.png" alt="speltbolle">
+            <h3>Nybagt speltbolle <span>38,-</span></h3>
+            <hr>
+            <p>Med smør og Gammel kakao-knas</p>
+            <p>-hjemmelavet marmelade +8,-</p>
+            <p>-hjemmelavet pålægschokolade i flotte farver</p>
+            <p>+12,-</p>
+        </div>
+
+        <div>
+            <img src="Images/morgenmad4.png" alt="grøntsagsbrød">
+            <h3>Ristet grøntsagsbrød <span>122,-</span></h3>
+            <hr>
+            <p>Toppet med urtecreme - serano - kogt æg - </p>
+            <p>hjemmelavet jordbærsirup - purløg</p>
+        </div>
+
+        <div>
+            <img src="Images/morgenmad1.png" alt="sortrisgrød">
+            <h3>Sort risgrød <span>89,-</span></h3>
+            <hr>
+            <p>Toppet med frugtkompot - mysli - karameliseret</p>
+            <p>fersken - yoghurt</p>
+        </div>
+
+        <div>
+            <img src="Images/morgenmad7.png" alt="krydretæg">
+            <h3>Krydret æg <span>125,-</span></h3>
+            <hr>
+            <p>Frisk spinat - spicy tomat - kikærter - hytteost -</p> 
+            <p>krydderurter. Serveres med brød og smør</p>
+            <p>(Tilføj krydret salami +15,-)</p>
+        </div>
+
+        <div>
+            <img src="Images/morgenmad6.png" alt="lidtafdethele">
+            <h3>Snup lidt af det hele <span> 173,-</span></h3>
+            <hr>
+            <p>Soya bircher mysli - ristet grøntsagsbrød - sort</p> 
+            <p>risgrød - krydret æg - nybagt speltbolle med ost, 
+            <p>smør og marmelade</p>
+        </div>
+    </section>
+
+        <div class="overskrift">
+            <h1>Frokost</h1>
+        </div>
+
+
+    <section class="menu">
+
+        <div>
+            <img src="Images/frokost1.png" alt="polenta">
+            <h3>Sesamstegt polenta <span>157,-</span></h3>
+            <hr>
+            <p>Sød kartoffel - grønt - dadler - karamelliserede</p>
+            <p>løg - gedefeta - (eller ønsker du kofeta?) - ristede</p> 
+            <p>græskarkerner - grøn tahindressing. Serveres</p> 
+            <p>med speltbrød og rødbede-hvidløgssmør</p>
+        </div>
+    
+        <div>
+            <img src="Images/frokost2.png" alt="salatkylling">
+            <h3>Salat med rugbrødsknasende</h3>
+            <h3>kylling og hummus<span>155,-</span></h3>
+            <hr>
+            <p>Sæsonens grønt - fintnittet kål - årstidens bagte</p> 
+            <p>rodfrugt - quinoa - vendt i min yndlings</p> 
+            <p>oliedressing</p>
+        </div>
+    
+        <div>
+            <img src="Images/frokost3.png" alt="amagermad">
+           <h3>Hamanns´ amagermad <span>150,-</span></h3>
+           <hr>
+           <p>Franskbrød - confiteret and - krydderurter -</p> 
+           <p>gulerodscreme - mascarpone - abrikos - rugbrød</p>
+        </div>
+    
+        <div>
+            <img src="Images/frokost4.png" alt="orientalskbygotto">
+            <h3>Orientalsk bygotto med kylling<span>156,-</span></h3>
+            <hr>
+            <p>Toppet med forårsløg - sesam - edamamebønner</p> 
+            <p>- hytteost - krydderurter - saltet nødder - vindruer 
+                (kan også laves vegatarisk - 125,-)</p>
+        </div>
+    
+        <div>
+            <img src="Images/frokost5.png" alt="salatpanko">
+            <h3>Salat med sprødt feta vendt i panko</h3> 
+            <h3>& nigellafrø og rucolapesto <span>155,-</span></h3>
+            <hr>
+            <p>Sæsonens grønt - fintsnittet kål - årstidens bagte</p> 
+            <p>rodfrugt - quinoa - vendt i min yndlings</p> 
+            <p>oliedressing</p>
             
+        </div>
+        </section>
+
+    </section>
+
+        <div class="overskrift">
+            <h1>Kage & drikke</h1>
+        </div>
+
+    <section class="menu">
+
             <div>
-                <img src="images/frokost.png" alt="frokost">
-                <h2>Frokost</h2>
-                <h5>Alle dage: 09:00 - 17:00</h5>
-                <p>Vores frokostkort er enkelt og simpelt - dog uden at gå på kompromis med nye og spændende anretninger.</p>
-                <a href="#">Se menukortet</a>
+                <img src="Images/ingefæris.png" alt="æblemostingefær">
+                <h3>Ufiltreret æblemost med ingefær <span>45,-</span></h3>
+                <hr>
             </div>
-            
+    
             <div>
-                <img src="images/kage.png" alt="kage og drikke">
-                <h2>Kage & drikke</h2>
-                <h5>Alle dage: 09:00 - 17:00</h5>
-                <p>I cafén'en har vi altid friskbagte kager, som løbende bliver skiftet ud alt efter sæson og nye ideer.</p>
-                <a href="#">Se menukortet</a>
+                <img src="Images/nyespresso.png" alt="espresso">
+                <h3>Espresso<span>25,-</span></h3>
+                <hr>
             </div>
-        </section>
-  
-  
+    
+            <div>
+                <img src="Images/rød2.png" alt="æblemostkirsebær">
+                <h3>Ufiltreret æblemost med</h3>
+                <h3>kirsebær<span>45,-</span></h3>
+                <hr>
+            </div>
+    
+            <div>
+                <img src="Images/sortkaffe.png" alt="americano">
+                <h3>Americano<span>33,-</span></h3>
+                <hr>
+            </div>
+    
+            <div>
+                <img src="Images/rabarbersaft.png" alt="rabarbersaft">
+                <h3>Rabarbersaft m/u brus <span>45,-</span></h3>
+                <hr>
+            </div>
+    
+            <div>
+                <img src="Images/noget.png" alt="cortado">
+                <h3>Cortado <span> 40,-</span></h3>
+                <hr>
+            </div>
 
-      
-<!-- RÆKKE ET : -->
-        <section class="instagram_et">
-            <div class="insta_et">
-                <img src="images/instagram1.jpg" alt="instagram1">
+            <div>
+                <img src="Images/te.png" alt="myntebrus">
+                <h3>Mynte-citron m/u brus<span>45,-</span></h3>
+                <hr>
             </div>
-  
-            <div class="insta_to">
-                <img src="images/instagram2.jpg" alt="instagram2">
+    
+            <div>
+                <img src="Images/americano.png" alt="cappuccino">
+                <h3>Cappuccino<span>40,-</span></h3>
+                <hr>
             </div>
-  
-            <div class="insta_tre">
-                <img src="images/instagram3.jpg" alt="instagram3">
+    
+            <div>
+                <img src="Images/vand.png" alt="danskvand">
+                <h3>Danskvand<span>35,-</span></h3>
+                <hr>
             </div>
-        </section>
-  
-<!-- RÆKKE TO: -->
-        <section class="instagram_to">
-            <div class="insta_fire">
-                <img src="images/instagram4.jpg" alt="instagram4">
+    
+            <div>
+                <img src="Images/kaffe.png" alt="latte">
+                <h3>Latte<span>42,-</span></h3>
+                <hr>
             </div>
-  
-            <div class="insta_fem">
-                <img src="images/instagram5.jpg" alt="instagram5">
+    
+            <div>
+                <img src="Images/iste.png" alt="icetea">
+                <h3>Hjemmelavet icetea<span> 45,-</span></h3>
+                <hr>
             </div>
-              
-            <div class="insta_seks">
-                <img src="images/instagram6.jpg" alt="instagram6">
-            </div>
-        </section>
-  
-<!-- RÆKKE TRE: -->
-        <section class="instagram_tre">
-            <div class="nyhed_fire">
-                <img src="images/instagram7.jpg" alt="instagram7">
-            </div>
-  
-            <div class="nyhed_fem">
-                <img src="images/instagram8.jpg" alt="instagram8">
-            </div>
-  
-            <div class="nyhed_seks">
-                <img src="images/instagram9.jpg" alt="instagram9">
-            </div>
-        </section>
-    </main>
 
+            <div>
+                <img src="Images/grønte.png" alt="urtete">
+                <h3>Urtete af frisk mynte<span>36,-</span></h3>
+                <hr>
+            </div>
+    
+            <div>
+                <img src="Images/radler.png" alt="radler">
+                <h3>Hamanns´ radler (Alc.)<span>60,-</span></h3>
+                <hr>
+            </div>
+    
+            <div>
+                <img src="Images/sortte.png" alt="sortte">
+                <h3>Sort te<span>36,-</span></h3>
+                <hr>
+            </div>
+    
+            <div>
+                <img src="Images/iskaffe.png" alt="dalgona">
+                <h3>Dalgona iskaffe<span>45,-</span></h3>
+                <hr>
+            </div>
+    
+            <div>
+                <img src="Images/kakao.png" alt="varkchokolade">
+                <h3>Varm chokolade (67,4 madagaskar</h3> 
+                <h3>kakao) m/u flødeskum<span> 46,-</span></h3>
+                <hr>
+            </div>
 
-    <footer>
-        <div class="footer">
-            <div id="column-one" >
-                <h1>Kontakt</h1>
-                <p>Gammel Munkegade 5 st.</p>
-                <p>8000 Aarhus C</p>
+            <div>
+                <img src="Images/almis.png" alt="iskaffe">
+                <h3>Hamanns´ iskaffe<span>42,-</span></h3>
+                <hr>
+            </div>
+    
+            <div>
+                <img src="Images/drikke.png" alt="chailatte">
+                <h3>Hjemmelavet chailatte<span>45,-</span></h3>
+                <hr>
+            </div>
+    
+            <div>
+                <img src="Images/grimting.png" alt="matcha">
+                <h3>Kold hindbær matcha-latte<span>55,-</span></h3>
+                <hr>
+            </div>
+    
+            <div>
+                <img src="Images/havre.png" alt="havremælk">
+                <h3>-lavet på havremælk<span>+ 6,-</span></h3>
+                <hr>
+            </div>
+
+            <div>
+                <img src="Images/hvidvin.png" alt="vin">
+                <h3>Hvidvin, bobler, rødvin eller rosé</h3>
+                <hr>
+                <p>Se prisen i caféen</p>
+            </div>
+
+            <div>
+                <img src="Images/kager.png" alt="kage">
+                <h3>Dagens kager</h3>
+                <hr>
+                <p>Se udvalget i montren eller spørg personalet</p>
+            </div>
+    
+    </section>
+    
+
+</main>
+
+<footer>
+    <div class="footer">
+        <div id="column-one" >
+            <h1>Kontakt</h1>
+            <p>Gammel Munkegade 5 st.</p>
+            <p>8000 Aarhus C</p>
+            <br>
+            <p>Åbningstider</p>
+            <p>Mandag-fredag: 09:00-18:00</p>
+            <p>Lørdag: 09:30-18:00</p>
+            <p>Søndag: 09:30-18:00</p>
+            <br>
+            <p>Mail: emma@hamanns1990.dk</p>
+            <p>Tlf.: 93 99 07 55</p>
+        </div>
+
+        <div id="column-two">
+            <h1>Tilmeld dig vores nyhedsbrev</h1>
+            <form>
+                <input type="email" placeholder="Din e-mail" required>
                 <br>
-                <p>Åbningstider</p>
-                <p>Mandag-fredag: 09:00-18:00</p>
-                <p>Lørdag: 09:30-18:00</p>
-                <p>Søndag: 09:30-18:00</p>
-                <br>
-                <p>Mail: emma@hamanns1990.dk</p>
-                <p>Tlf.: 93 99 07 55</p>
-            </div>
-
-            <div id="column-two">
-                <h1>Tilmeld dig vores nyhedsbrev</h1>
-                <form>
-                    <input type="email" placeholder="Din e-mail" required>
-                    <br>
-                    <button type="submit">Tilmeld</button>
-                </form>
-                <div class="social-icons">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-square-facebook"></i>
-                </div>
-            </div>
-
-            <div id="column-three" >
-                <h1>Info</h1>
-                <a class="hover-underline-animation" href="#">Smileyrapport</a>
-                <a class="hover-underline-animation" href="#">Handelsbetingelser</a>
-                <a class="hover-underline-animation" href="#">Leveringsinformation</a>
-                <a class="hover-underline-animation" href="#">Ombytning og returnering</a>
-                <a class="hover-underline-animation" href="#">Servicevilkår</a>
-                <a class="hover-underline-animation" href="#">Refusionspolitik</a>
-                <a class="hover-underline-animation" href="#">Job</a>
+                <button type="submit">Tilmeld</button>
+            </form>
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
             </div>
         </div>
-    </footer>
+
+        <div id="column-three" >
+            <h1>Info</h1>
+            <a class="hover-underline-animation" href="#">Smileyrapport</a>
+            <a class="hover-underline-animation" href="#">Handelsbetingelser</a>
+            <a class="hover-underline-animation" href="#">Leveringsinformation</a>
+            <a class="hover-underline-animation" href="#">Ombytning og returnering</a>
+            <a class="hover-underline-animation" href="#">Servicevilkår</a>
+            <a class="hover-underline-animation" href="#">Refusionspolitik</a>
+            <a class="hover-underline-animation" href="#">Job</a>
+        </div>
+    </div>
+</footer>
+
 </body>
+</html>
