@@ -80,8 +80,7 @@ nav div i{
   text-decoration: none;
   display: block;
   text-align: left;
-  margin-left: -1px;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -716,7 +715,7 @@ form button:hover{
 
 /*----RESPONSIVE----*/
 /*----LAPTOP----*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1100px){
   #menuToggle span{
     display: none !important; 
   }
@@ -725,6 +724,9 @@ form button:hover{
     display: none;
   }
 
+  .instagram_app{display: none;}
+
+  .cardsection img{margin-right: 15px;}
 
 }
 
@@ -732,7 +734,10 @@ form button:hover{
 
 
 /*----MOBIL----*/
-@media screen and (max-width:768px){
+@media screen and (max-width:1100px){
+
+
+/*----HEADER----*/
   header{
     justify-content:space-between ;
 }
@@ -754,14 +759,100 @@ form button:hover{
 
 .slideshow_sectionINDEX{
   width: 100%;
-  height: 600px;
+  height: 800px;
   margin-top: -4px;
 }
 
 .slideshow_sectionINDEX img{
-  width: 120%;
+  width: 163%;
 }
 
+#logo{
+
+  text-align: center;
+  margin-right: 20%;
+}
+
+
+.cardsection{
+  justify-content: space-between;
+  flex-direction: column;
+  height: auto;
+  align-items: center;}
+  
+.cardsection div h1{
+  margin-top: 10px;
+  text-align: center;
+
+}
+
+.cardsection div p{
+text-align: center;
+padding: 20px;
+
+}
+
+.cardsection img{
+
+}
+
+/*---- MENU KORT INDEX ----*/
+
+.cardscontainer{
+  justify-content: space-between;
+  flex-direction: column;
+  height: auto;
+  align-items: center;}
+
+.cardscontainer{
+
+  justify-content: space-between;
+  height: auto;
+
+}
+
+.cardscontainer div{
+  flex-direction: column;
+  width: 80%;
+  height: 600px;
+  margin-bottom: 50px;
+
+}
+
+.cardscontainer a{
+
+  margin-left: 14%;
+}
+
+
+/*----INSTAGRAM----*/
+.instagram_et{display: none;}
+.instagram_to{display:none;}
+.instagram_tre{display:none;}
+  
+.instagram_app{
+  margin-left: 11%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----FOOTER----*/
 .footer{
   flex-direction: column;
 }
