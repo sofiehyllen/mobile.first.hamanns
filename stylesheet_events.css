@@ -165,7 +165,7 @@ nav div i{
   margin-bottom: 5px;
   position: relative;
   
-  background: #eeeee1;
+  background: #464a38;
   border-radius: 3px;
   
   z-index: 1;
@@ -884,7 +884,21 @@ margin-left: 8%;
   width: 90%; 
 }
 
+/*----SHOP SIDE----*/
 
+.cardscontainer_shop{
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.cardscontainer_shop div{
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  margin-bottom: 10%;
+
+}
 
 /*----FOOTER----*/
 .footer{

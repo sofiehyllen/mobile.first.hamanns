@@ -165,7 +165,7 @@ nav div i{
   margin-bottom: 5px;
   position: relative;
   
-  background: #eeeee1;
+  background: #464a38;
   border-radius: 3px;
   
   z-index: 1;
@@ -256,11 +256,11 @@ body{
 .menuogtakeaway{
   display: flex;
   width: 100%;
-  height: 700px;
+  height: 600px;
   position: relative;
   font-family: 'Montserrat', sans-serif; 
-  padding: 150px 40px 50px 40px;
-  
+  padding: 130px 40px 50px 40px;
+  margin-bottom: -60px;
 }
   
 .menuogtakeaway div{
@@ -271,8 +271,8 @@ body{
   
 .menuogtakeaway img{
   float: right;
-  padding-top: 25px;
-  padding-right: 30px;
+  padding-top: 40px;
+  padding-right: 50px;
 }
 
 .menuogtakeaway h1{
@@ -283,13 +283,13 @@ body{
 }
    
 .menuogtakeaway p{
-  font-size: 27px;
+  font-size: 24px;
   color: white;
   font-family: 'Zen Kurenaido', sans-serif;
-  line-height: 34px;
+  line-height: 35px;
   padding-top: 30px;
   padding-left: 60px;
-  width: 50%;
+  width: 60%;
 }
   
  
@@ -447,13 +447,15 @@ form button:hover{
 /*----SOCIALE MEDIER IKONER----*/
 .social-icons{
   padding-top: 80px;
+  display: flex;
+  justify-content: center;
 }
   
 .social-icons i{
   font-size: 30px;
   cursor: pointer;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   transition: all .2s ease-in-out;
 }
 
@@ -575,91 +577,110 @@ form button:hover{
 
 
 
-
-
 /*----RESPONSIVE----*/
 /*----LAPTOP----*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1090px){
   #menuToggle span{
     display: none !important; 
   }
   
   #menu{
-    display: none;
+    display: none !important;
   }
 }
 
 
-
-
-
-
-
-
-
-
 /*----MOBIL----*/
-@media screen and (max-width:768px){
-  header{
-    justify-content:space-between ;
-}
-
-.navbar-left, .navbar-right{
-  display: none;
-}
-
-.forside-banner{
-  flex-direction: column;
-}
-
-#forside-baggrund img{
-  width: 100%;
-  height: 700px;
-}
-
-.slideshow_sectionINDEX{
-  width: 100%;
-  height: 600px;
-  margin-top: -4px;
-}
-
-.slideshow_sectionINDEX img{
-  width: 120%;
-}
-
-.footer{
-  flex-direction: column;
-}
-
-.footer :nth-child(1){order: 2;}
-.footer :nth-child(2){order: 1;}
-.footer :nth-child(3){order: 3;}
-
-#column-two{
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-#column-one{
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-#column-three{
-  text-align: center;
-}
-
-.cardsection{
-  flex-direction: column;
-  margin-top: 250px;
-}
-
-.cardsection p{
-  margin-bottom: 170px;
-}
-
-.cardscontainer{
-  flex-direction: column;
-  align-items: center;
-}
-}
+@media screen and (max-width:1090px){
+  /*----HEADER----*/
+    header{
+      justify-content:space-between ;
+  }
+  
+  .navbar-left, .navbar-right{
+    display: none;
+  }
+  
+  
+  /*----MENU & TAKEAWAY SECTION----*/
+  
+  .menuogtakeaway{
+    flex-direction: column;
+  }
+  
+  
+  .menuogtakeaway{
+    width: auto;
+    padding: auto;
+    height: auto;
+  }
+  
+  .menuogtakeaway h1{
+    text-align: center;
+    width: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  
+  .menuogtakeaway p{
+    
+    text-align: center;
+    width: auto;
+    padding: 8%;
+    margin-bottom: 40px;
+  }
+  
+  .menuogtakeaway img{
+    
+    width: 70%;
+    padding: 20px;
+    margin: 70px;
+  }
+    
+    
+  
+  
+  
+  
+  
+  
+  /*----FOOTER----*/
+  
+  .footer{
+    flex-direction: column;
+  }
+  
+  .footer :nth-child(1){order: 2;}
+  .footer :nth-child(2){order: 1;}
+  .footer :nth-child(3){order: 3;}
+  
+  #column-two{
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  #column-one{
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  #column-three{
+    text-align: center;
+  }
+  
+  .cardsection{
+    flex-direction: column;
+    margin-top: 250px;
+  }
+  
+  .cardsection p{
+    margin-bottom: 170px;
+  }
+  
+  .cardscontainer{
+    flex-direction: column;
+    align-items: center;
+  }
+  }
+  
+  

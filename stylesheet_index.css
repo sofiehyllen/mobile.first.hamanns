@@ -245,6 +245,7 @@ nav div i{
 .forside-banner{
   width: 100%;
   display: flex;
+  
 }
 
 /*----LOGO PÅ FORSIDEN----*/
@@ -253,6 +254,24 @@ nav div i{
   top: 150px;
   left: 160px;
 }
+
+
+
+/*----SLIDESHOW I FORSIDEBANNER----*/
+.slideshow_sectionINDEX{
+  height: 800px;
+  display: flex;
+  width: 50%;
+  overflow: hidden;
+}
+
+.slideshow_sectionINDEX img{
+  display: flex; 
+}
+
+
+
+
 
 /*----BOOK BORD KNAP PÅ FORSIDE----*/
 #book-button-forside a{
@@ -273,17 +292,7 @@ nav div i{
   transform: scale(1.1);
 }
 
-/*----SLIDESHOW I FORSIDEBANNER----*/
-.slideshow_sectionINDEX{
-  height: 800px;
-  display: flex;
-  width: 50%;
-  overflow: hidden;
-}
 
-.slideshow_sectionINDEX img{
-  display: flex; 
-}
 
 
 
@@ -396,6 +405,10 @@ margin-bottom: 20px;
 }
 
 /*----"Se menukort" KNAP----*/
+/*----Vi har haft en del problemer med denne knap. Vores transition og scale ville nemlig kun fungere hvis vi havde position: absolute.
+Men når vi har position: absolute har det ikke være muligt for os at centrere knappen når vi gjorde den responsiv.
+På shop.html kan knappen ses uden transform og position: absolut, hvorved det er er responsivt.
+Har du mon et bud på hvorfor dette kan være?----*/
 .cardscontainer a{
   color: white;
   background-color: #856e6b;
@@ -559,13 +572,15 @@ form button:hover{
 /*----SOCIALE MEDIER IKONER----*/
 .social-icons{
   padding-top: 80px;
+  display: flex;
+  justify-content: center;
 }
   
 .social-icons i{
   font-size: 30px;
   cursor: pointer;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   transition: all .2s ease-in-out;
 }
 
@@ -603,6 +618,10 @@ form button:hover{
 
 
 /*----DROPDOWN ANIMATION----*/
+.tracking-in-expand{
+animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
  @keyframes tracking-in-expand {
   0% {
     letter-spacing: -0.5em;
@@ -691,17 +710,19 @@ form button:hover{
 
 /*----RESPONSIVE----*/
 /*----LAPTOP----*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1090px){
   #menuToggle span{
     display: none !important; 
   }
   
   #menu{
-    display: none;
+    display: none !important;
+  }
+
+  .instagram_app{
+    display: none !important;
   }
 }
-
-
 
 
 
@@ -711,18 +732,31 @@ form button:hover{
 
 
 /*----MOBIL----*/
-@media screen and (max-width:768px){
-  header{
-    justify-content:space-between ;
-}
+@media screen and (max-width:1090px){
+  
+
+/*----HEADER----*/
+header{
+  justify-content:space-between ;}
 
 .navbar-left, .navbar-right{
-  display: none;
-}
+  display: none;}
+
+#book-button-forside a{
+  text-align: center;}
+  
+
+
+
+
+
+
 
 .forside-banner{
   flex-direction: column;
 }
+
+
 
 #forside-baggrund img{
   width: 100%;
@@ -731,14 +765,101 @@ form button:hover{
 
 .slideshow_sectionINDEX{
   width: 100%;
-  height: 600px;
+  height: 900px;
   margin-top: -4px;
+  background-color: #929681;
+  justify-content: center;
 }
 
 .slideshow_sectionINDEX img{
-  width: 120%;
+  width: 100%;
 }
 
+/*----OM OS SECTION----*/
+.cardsection img{
+
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 80%;
+  }
+  
+.cardsection{
+  flex-direction: column;
+  margin-top: 50px;
+  height: auto;
+  margin-bottom: 10%;
+
+}
+  
+.cardsection p{
+  
+  text-align: center;
+  width: auto;
+  margin-left: 7%;
+  margin-right: 7%;
+  
+}
+  
+.cardsection h1{
+  text-align: center;
+}
+  
+.cardscontainer{
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*----MENU KORT----*/
+
+.cardsection h1{
+  text-align: center;
+}
+  
+.cardscontainer{
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+
+}
+
+.cardscontainer div{
+  width: auto;
+  height: 600px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+.cardscontainer div a{
+  margin-left: 8%;
+
+
+}
+
+
+
+
+
+/*----INSTAGRAM----*/
+
+.instagram_et{display: none;}
+.instagram_to{display: none;}
+.instagram_tre{display: none;}
+
+.instagram_app{
+  
+  width: auto;
+  height: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
+/*----FOOTER----*/
 .footer{
   flex-direction: column;
 }
@@ -759,19 +880,5 @@ form button:hover{
 
 #column-three{
   text-align: center;
-}
-
-.cardsection{
-  flex-direction: column;
-  margin-top: 250px;
-}
-
-.cardsection p{
-  margin-bottom: 170px;
-}
-
-.cardscontainer{
-  flex-direction: column;
-  align-items: center;
 }
 }
