@@ -1,19 +1,21 @@
-
-
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
 
 main{
-    background-color: #eeeee1;}
+  background-color: #eeeee1;
+}
 
-header{height: 30px;}
+header{
+  height: 1px;
+}
 
 
-/* NAVIGATIONSBAR */
+/*----NAVIGATIONSBAR----*/
 nav{
   width: 100%;
   z-index: 1;
@@ -47,7 +49,7 @@ nav div i{
   font-size: 40px;}
 
 
-/* DROPDOWN I NAV */
+/*----DROPDOWN I NAV----*/
 .dropdown {
   float: left;
   overflow: hidden;}
@@ -82,7 +84,7 @@ nav div i{
 .dropdown:hover .dropdown-content {
   display: block;}
 
-/* BOOK BORD KNAP I NAV */
+/*----BOOK BORD KNAP I NAV----*/
 #book-button{
   border: 1px solid #464a38;
   border-radius: 30px;
@@ -96,22 +98,6 @@ nav div i{
 }
 
 
-#book-button-forside a{
-    position: absolute;
-    top: 520px;
-    left: 210px;
-    color: #464a38;
-    font-family: 'Montserrat', sans-serif;
-    border-bottom: 1px #464a38 solid;
-    padding: 0px 10px 0px 10px;
-    font-size: 25px;
-    transition: all .2s ease-in-out;
-    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  }
-  
-  #book-button-forside :hover{
-    transform: scale(1.1);
-  }
 
 
 
@@ -123,125 +109,117 @@ nav div i{
 
 
 
-
-
-
-/* OVERSKRIFT EVENTS*/
-.overskrift h1{
-    width: 100%;
-    color: #2e3903;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    border: 1px solid black;
-    text-align: center;
-  }
-
-
-
-
-/* CARDSCONTAINER - EVENTS */
-.cardscontainer{
-    display:flex;
-    justify-content:space-around;
-    width:100%;
-    flex-wrap:wrap;
-    
-    margin-bottom: 50px;
-    height: 700px;
-  }
-
-.cardscontainer div{
-    width:30%;
-    border-radius:20px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    text-align:center;
-}
-
-
-.cardscontainer div h2{
-    font-size: 35px;
-    color: white;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 20px;
-  }
-
-.cardscontainer div p{
-    font-size: 20px;
-    color: white;
-    padding-bottom: 20px;
-  }
-
-.cardscontainer div:first-child, .cardscontainer div:last-child{
-    background-color: #c49a95;}
-
-.cardscontainer div:nth-child(2){
-    background-color: #856e6b;}
-
-
-
-
-
-.cardscontainer img{
-    margin-top: 40px;
-    border-radius: 10px;
-    margin-bottom: 20px;}
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CARDSECTION - EVENTS - NYHED */
+/*------NYHED------*/
 .cardsection{
-    display:flex;
-    justify-content:space-around;
-    width:90%;
-
-    margin-left: 60px;
-    margin-top: 150px;
-    height: 400px;
-    color: #464a38;
-    border: 1px solid green;
-  }
+  display:flex;
+  justify-content:space-around;
+  width:90%;
+  margin-top: 150px;
+  height: 400px;
+  color: #464a38;
+}
 
 .cardsection div{
   width:50%;
   padding-bottom:5px;
-  
-  
   border-radius:20px;
   position: relative;
   font-family: 'Montserrat', sans-serif;
-  text-align:center;}
+  text-align:center;
+}
 
+
+/*------TEKST I NYHED------*/
 .cardsection h1{
-    font-size: 40px;
-    margin-left: 30px;
-    margin-bottom: 0px;
-    text-align: left;}
+  font-size: 40px;
+  text-align: left;
+  padding-bottom: 5px;
+}
 
 .cardsection p{
-    text-align: left;
-    line-height: 30px;
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 15px;}
+  text-align: left;
+  line-height: 30px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
 
 hr{
-    height: 1px;
-    background-color: #464a38;
-    border: none;}
+  height: 1px;
+  background-color: #464a38;
+  border: none;
+}
+
+
+
+
+
+
+/*----CARDSCONTAINER EVENTS----*/
+.cardscontainer{
+  display:flex;
+  justify-content:space-around;
+  width:100%;
+  margin-top: 50px;
+  margin-bottom: 110px;
+  height: 650px;
+}
+
+.cardscontainer div{
+  width:30%;
+  border-radius:20px;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+}
+
+/*----TEKST I CARDSCONTAINER EVENTS----*/
+.cardscontainer div h2{
+  font-size: 35px;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+
+.cardscontainer div p{
+  font-size: 20px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.cardscontainer div:first-child, .cardscontainer div:last-child{
+  background-color: #c49a95;
+}
+
+.cardscontainer div:nth-child(2){
+  background-color: #856e6b;
+}
+
+.cardscontainer img{
+  margin-top: 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/*----BUTTON I CARDSCONTAINER EVENTS----*/
+.cardscontainer a{
+  color: white;
+  background-color: #856e6b;
+  padding: 8px 15px 8px 15px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 140px;
+  transition: all .2s ease-in-out;
+}
+
+.cardscontainer div:nth-child(2) a{
+  background-color: #c49a95;
+}
+.cardscontainer a:hover{
+  transform: scale(1.2);
+}
 
 
 
@@ -255,64 +233,53 @@ hr{
 
 
 
+/*----INSTAGRAM SECTION----*/
+.instagram{
+  margin: 0px 20px 80px 20px;
+}
 
-
-
-
-/* OVERSKRIFT INSTAGRAM */
-  .overskrift_instagram h1{
-    width: 100%;
-    color: #2e3903;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    border: 1px solid black;
-    text-align: center;
-  }
-
-
-/* INSTAGRAM SECTION */
 .instagram_et, .instagram_to, .instagram_tre{
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-    }
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
 
- .instagram_et > div, .instagram_to > div, .instagram_tre > div{
-    width: 33%;
-    height: 330px;
-    margin: 10px;
-    background-color: #eeeee1;
-    position: relative;}
+.instagram div{
+  width: 33%;
+  height: 330px;
+  margin: 10px;
+  background-color: #eeeee1;
+  position: relative;
+} 
 
-/* INSTAGRAM RÆKKE 1 */
- .instagram_et > div:first-child{
-    width: 40%;}
+/*----INSTAGRAM RÆKKE 1----*/
+.instagram_et > div:first-child{
+  width: 40%;
+}
 
- .instagram_et{margin-top: 20px;}
-
-
-/* INSTAGRAM RÆKKE 2 */
+/*----INSTAGRAM RÆKKE 2----*/
 .instagram_to > div{
-    width: 33%;
-    background-color: #eeeee1;
-    position: relative;}
+  width: 33%;
+  background-color: #eeeee1;
+  position: relative;
+}
 
 .instagram_to > div:nth-child(2){
-    width: 40%;}
+  width: 40%;
+}
 
 .instagram_to > div:last-child{
-    margin-top: 30px;}
+  margin-top: 30px;
+}
 
-
-/* INSTAGRAM RÆKKE 3 */
+/*----INSTAGRAM RÆKKE 3----*/
 .instagram_tre{
-    margin-top: -25px;}
-
-.instagram_tre > div{
-    margin-bottom: 100px;}
+  margin-top: -25px;
+}
 
 .instagram_tre > div:last-child{
-    width: 40%;}
+  width: 40%;
+}
 
 
 
@@ -330,75 +297,84 @@ hr{
 
 
 
-/* OVERSKRIFT - SHOP */
-  .overskrift h1{
-    width: 100%;
-    color: #2e3903;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    border: 1px solid black;
-    text-align: center;
-  }
 
 
-/* CARDSCONTAINER - SHOP */
+
+/*----CARDSCONTAINER SHOP----*/
 .cardscontainer_shop{
-    display:flex;
-    justify-content:space-around;
-    width:100%;
-    flex-wrap:wrap;
-    margin-top: 0px;
-    margin-bottom: 50px;
-    height: 800px;}
+  display:flex;
+  justify-content:space-around;
+  width:100%;
+  margin-bottom: 70px;
+  height: 800px;
+}
 
 .cardscontainer_shop div{
-    width: 45%;
-    padding-bottom:5px;
-    margin-top: 50px;
-    border:2px solid white;
-    border-radius:20px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    text-align:center;}
+  width: 45%;
+  padding-bottom:5px;
+  margin-top: 50px;
+  border-radius:20px;
 
-.cardscontainer_shop div p, .cardscontainer_shop div h2{
-    margin:15px;
-    color: rgb(255, 255, 255);}
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+}
 
 .cardscontainer_shop div h2{
-    text-transform:uppercase;
-    font-size: 35px;
-    margin-top: 40px;
-    margin-bottom: 30px;}
+  color: white;
+  font-size: 35px;
+}
+
+.cardscontainer_shop div h3{
+  padding-top: 15px;
+  color: white;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 23px;
+}
 
 .cardscontainer_shop div p{
-    font-size: 20px;
-    margin-top: 40px;}
+  padding-top: 15px;
+  padding-bottom: 35px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
 
 .cardscontainer_shop div:first-child{
-    background-color: #856e6b;
-
+  background-color: #856e6b;
 }
 
 .cardscontainer_shop div:last-child{
-    background-color: #c49a95;}
+  background-color: #856e6b;
+}
 
-.cardscontainer img{
-    margin-top: 40px;
-    border-radius: 10px;
-    margin-bottom: 20px;}
-
-
+.cardscontainer_shop img{
+  padding: 35px 15px;
+}
 
 
+/*----BUTTON I CARDSCONTAINER SHOP----*/
+.cardscontainer_shop a{
+  color: white;
+  background-color: #c49a95;
+  padding: 8px 15px 8px 15px;
+  border-radius: 20px;
+  
+  
+  transition: all .2s ease-in-out;
+}
+
+.cardscontainer_shop a:hover{
+  transform: scale(1.2);
+}
 
 
 
 
 
 
-/* CARDSCONTAINER - INFO */
 
+
+/*----CARDSCONTAINER INFO----*/
 .cardscontainer_shop_info{
     display:flex;
     justify-content:space-around;
@@ -416,20 +392,25 @@ hr{
     font-family: 'Montserrat', sans-serif;
     text-align:center;}
 
-.cardscontainer_shop_info div p, .cardscontainer_shop_info div h2{
-    margin-top: 200px;
-    margin:15px;
-    color: #464a38;}
 
 .cardscontainer_shop_info div h2{
-    text-transform:uppercase;
-    font-size: 30px;
-    margin-top: 15px;
-    margin-bottom: 30px;}
+  color: #464a38;
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
 
+.cardscontainer_shop_info h3{
+  font-size: 22px;
+  color: #464a38;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
 .cardscontainer_shop_info div p{
-    font-size: 20px;
-    margin-top: 40px;}
+  color: #464a38;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 22px;
+
+}
 
 .cardscontainer_shop_info img{
     width: 20%;
@@ -478,87 +459,36 @@ hr{
 
 
 
+  
+  
 
 
-/* FOOTER */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----FOOTER----*/
 .footer{
-    width: 100%;
-    display: flex;
-    padding: 40px;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    background-color: #929681;
-    position: relative;
-    margin-top: 200px;
-    bottom: 0;}
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(146,150,129);
+  padding: 30px;
+  bottom: 0;
+}
 
-.footer .column-two{
-    text-align: center;}
-
-/* FOOTER TEXT */
-.footer p{
-    line-height: 22px;
-    font-family: 'Montserrat', sans-serif;}
-
-.footer h1{
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;}
-
-.footer a{
-    display: block;
-    color: white;
-    line-height: 22px;
-    font-family: 'Montserrat', sans-serif;}
-
-/* NYHEDSBREV */
-form input{
-    width: 300px;
-    height: 35px;
-    padding-left: 10px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    margin-bottom: 40px;
-    text-align: left;
-    background-color: white;}
-
-/* TILMELDNINGSKNAP */
-  form button{
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 8px 23px;
-    cursor: pointer;}
-
-  /* SOCIALE MEDIER IKONER */
-.social-icons{
-    margin-top: 50px;}
-  
-.social-icons i{
-    font-size: 30px;
-    cursor: pointer;
-    padding-left: 10px;
-    padding-right: 10px;}
-
-
-.footer{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    background-color: rgb(146,150,129);
-    padding: 30px;
-    bottom: 0;}
-  
-  
-#column-two{
-    text-align: center;}
-  
-  
-/* FOOTER TEXT */
+/*----FOOTER TEXT----*/
 .footer p{
     line-height: 26px;
     font-family: 'Montserrat', sans-serif;}
@@ -574,21 +504,26 @@ form input{
     font-family: 'Montserrat', sans-serif;
     padding-top: 10px;}
   
-/* NYHEDSBREV */
+/*----NYHEDSBREV----*/
 form input{
-    width: 300px;
-    height: 35px;
-    padding-left: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
-    border: none;
-    outline: none;
-    margin-bottom: 40px;
-    text-align: left;
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;}
-  
-/* TILMELDNINGSKNAP */
+  width: 300px;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-top: 40px;
+  border: none;
+  outline: none;
+ 
+  text-align: left;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#column-two{
+  text-align: center;
+}
+
+/*----TILMELDNINGSKNAP----*/
 form button {
     background: transparent;
     color: white;
@@ -598,15 +533,16 @@ form button {
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
+    margin-top: 50px;
     transition: all .2s ease-in-out;}
   
 form button:hover{
     background-color: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);}
   
-/* SOCIALE MEDIER IKONER */
+/*----SOCIALE MEDIER IKONER----*/
   .social-icons{
-    padding-top: 80px;}
+    padding-top: 50px;}
     
   .social-icons i{
     font-size: 30px;
@@ -619,6 +555,8 @@ form button:hover{
     transform: scale(1.3);}
   
   
+  
+
   
   
   

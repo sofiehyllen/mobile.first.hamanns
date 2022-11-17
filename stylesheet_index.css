@@ -11,7 +11,7 @@ nav{
   width: 100%;
   padding-top: 25px;
   position: fixed;
-  z-index: 3;
+  z-index: 1;
 }
 
 nav img{
@@ -47,6 +47,14 @@ nav div i{
 }
 
 
+
+
+
+
+
+
+
+
 /*----DROPDOWN I NAV----*/
 .dropdown {
   float: left;
@@ -80,12 +88,20 @@ nav div i{
   text-decoration: none;
   display: block;
   text-align: left;
-  padding-top: 10px;
+  margin-left: -1px;
+  margin-top: 10px;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+
+
+
+
+
 
 
 
@@ -108,18 +124,137 @@ nav div i{
 
 
 
+
+
+
+/*----BURGER MENU I MOBILE VERSION----*/
+#menuToggle{
+  display: block;
+  position: relative;
+  float: right;
+  z-index: 1;
+}
+
+/*----TEKSTEN INDE I MENUEN----*/
+#menuToggle a{
+  text-decoration: none;
+  color: #464a38;
+  transition: color 0.3s ease;
+}
+
+/*----CHECKBOXEN OVENPÅ BURGERMENUEN----*/
+#menuToggle input{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /*---- Her skjuler vi vores button----*/
+  z-index: 2; /*----og placer den ovenpå vores burger----*/
+}
+
+/*----BURGEREN----*/
+#menuToggle span{
+  display: block;
+  width: 33px;
+  height: 4px;
+
+  margin-right: 40px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #eeeee1;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: 
+    transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+
+/*----Vi laver burgeren om til et kryds----*/
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #464a38;
+}
+
+/*----Vi skjuler stregen i midten----*/
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*----Sidste streg skal rotere modsat vej----*/
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu{
+  position: absolute;
+  width: 300px;
+  height: 700px;
+  margin: -100px 0 0 -200px;
+  padding-top: 125px;
+  padding-right: 120px;
+  
+  background: #eeeee1;
+  list-style-type: none;
+ 
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li{
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+/*----Så den slider ind fra højre----*/
+#menuToggle input:checked ~ ul{
+  transform: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*----FORSIDE BANNER----*/
 .forside-banner{
   width: 100%;
   display: flex;
 }
 
+/*----LOGO PÅ FORSIDEN----*/
 #logo{
   position: absolute;
   top: 150px;
   left: 160px;
 }
 
+/*----BOOK BORD KNAP PÅ FORSIDE----*/
 #book-button-forside a{
   position: absolute;
   top: 530px;
@@ -150,36 +285,50 @@ nav div i{
   display: flex; 
 }
 
+
+
+
+
+
+
+
+
+
 /*----BAGGRUNDSFARVE----*/
 main{
   background-color: #eeeee1;
 }
 
-/*---OM OS SEKTIONEN---*/
+
+
+
+
+
+
+
+
+
+/*----OM OS SEKTIONEN----*/
 .cardsection{
   display:flex;
   justify-content:space-around;
-  
   height: 330px;
-  margin-top: 70px;
-  margin-bottom: 70px;
-  
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .cardsection img{
-  padding-left: 35px;
+  padding-left: 25px;
   padding-top: 10px;
 }
 
 .cardsection div{
-width:100%;
-font-family: 'Montserrat', sans-serif;
-color: #464a38;
-
+  width:100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #464a38;
 }
 
-
-
+/*----TEKST UNDER OM OS----*/
 .cardsection h1{
   font-size: 40px;
 }
@@ -189,10 +338,16 @@ color: #464a38;
   padding-top: 25px;
   padding-right: 20px;
   font-size: 22px;
-  line-height: 30px;
+  line-height: 36px;
   font-family: 'Zen Kurenaido', sans-serif;
-
 }
+
+
+
+
+
+
+
 
 
 
@@ -202,16 +357,16 @@ color: #464a38;
   justify-content:space-around;
   width:100%;
   height: 600px;
-  position: relative;
+  margin-bottom: 100px;
 }
 
 .cardscontainer div{
-width:30%;
-position: relative;
-border-radius:20px;
-font-family: 'Montserrat', sans-serif;
-text-align:center;
-background-color: #c49a95;
+  width:30%;
+  position: relative;
+  border-radius:20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+  background-color: #c49a95;
 }
 
 /*----BILLEDE I MENUKORT----*/
@@ -240,6 +395,7 @@ margin-bottom: 20px;
   font-size: 18px;
 }
 
+/*----"Se menukort" KNAP----*/
 .cardscontainer a{
   color: white;
   background-color: #856e6b;
@@ -261,7 +417,6 @@ margin-bottom: 20px;
 
 .cardscontainer a:hover{
   transform: scale(1.2);
-  
 }
 
 
@@ -270,104 +425,56 @@ margin-bottom: 20px;
 
 
 
- /* KORT NYHEDER RÆKKE 1 */
- .card_nyheder_et, .card_nyheder_to{
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
-  margin: 15px;
-  font-family: 'Roboto Slab', serif;}
-
-.card_nyheder_et > div, .card_nyheder_to > div{
-  width: 33%;
-  height: 400px;
-  background-color: rgb(139, 139, 139);
-  border-radius: 10px;
-  font-family: 'Roboto Slab', serif;
-  text-transform:uppercase;
-  position: relative;}
-
-.card_nyheder_et > div p, .card_nyheder_to > div p{
-  position:absolute;
-  bottom:40px;
-  margin-left: 10px;
-  font-family: 'Roboto Slab', serif;
-  text-transform:uppercase;}
-
-.card_nyheder_et > div h1, .card_nyheder_to > div h1{
-  margin-left: 10px;
-  font-family: 'Roboto Slab', serif;
-  text-transform:uppercase;}
-
-.card_nyheder_et > div h3, .card_nyheder_to > div h3{
-  margin-left: 10px;
-  font-family: 'Roboto Slab', serif;
-  text-transform:uppercase;}
-
-.card_nyheder_et > div:first-child{
-  width: 60%;}
 
 
-  
 
-/* INSTAGRAM */
+/*----INSTAGRAM BILLEDEGALLERI----*/
+.instagram{
+  margin: 0px 20px 100px 20px;
+}
+
 .instagram_et, .instagram_to, .instagram_tre{
   display: flex;
   justify-content: space-around;
-  width: 100%;
   overflow: hidden;
-  
-  }
+}
 
-.instagram_et > div, .instagram_to > div, .instagram_tre > div{
-   width: 33%;
-   height: 330px;
-   background-color: #eeeee1;
-   position: relative;
-   margin: 10px;
-  }
+.instagram div{
+  width: 33%;
+  height: 330px;
+  margin: 10px;
+  background-color: #eeeee1;
+  position: relative;
+} 
 
-/* INSTAGRAM RÆKKE 1 */
+/*----INSTAGRAM BILLEDERÆKKE 1----*/
 .instagram_et > div:first-child{
-   width: 40%;}
+  width: 40%;
+}
 
-.instagram_et{margin-top: 20px;}
+/*----INSTAGRAM BILLEDERÆKKE 2----*/
+.instagram_to > div{
+  width: 33%;
+  background-color: #eeeee1;
+  position: relative;
+}
 
+.instagram_to > div:nth-child(2){
+  width: 40%;
+}
 
+.instagram_to > div:last-child{
+  margin-top: 30px;
+}
 
-
-/* INSTAGRAM RÆKKE 2 */
- .instagram_to > div{
-    width: 33%;
-    background-color: #eeeee1;
-    position: relative;}
-
- .instagram_to > div:nth-child(2){
-    width: 40%;}
-
-   .instagram_to > div:last-child{
-      margin-top: 40px;}
-
-
-/* INSTAGRAM RÆKKE 3 */
+/*----INSTAGRAM BILLEDERÆKKE 3----*/
 .instagram_tre{
-  margin-top: -30px;
+  margin-top: -25px;
 }
 
-.instagram_tre > div{
-  margin-bottom: 100px;
+.instagram_tre > div:last-child{
+  width: 40%;
 }
-
- .instagram_tre > div:last-child{
-    width: 40%;}
-
-
-
-
-
-
-
-
 
 
 
@@ -379,6 +486,8 @@ margin-bottom: 20px;
 
 
 /*----FOOTER----*/
+/*--Vi har givet vores footer en klasse selvom dette ikke er nødvendigt da vi bare kunne bruge child select.
+Men af en eller anden årsag opførte footeren sig underligt når vi gjorde dette. Derfor gav vi den en klasse--*/
 .footer{
   width: 100%;
   display: flex;
@@ -389,12 +498,6 @@ margin-bottom: 20px;
   padding: 30px;
   bottom: 0;
 }
-
-
-#column-two{
-  text-align: center;
-}
-
 
 /*----FOOTER TEXT----*/
 .footer p{
@@ -416,6 +519,11 @@ margin-bottom: 20px;
 }
 
 /*----NYHEDSBREV----*/
+/*----Vi får kolonnen i midten til at centrere teksten----*/
+#column-two{
+  text-align: center;
+}
+
 form input{
   width: 300px;
   height: 35px;
@@ -448,7 +556,7 @@ form button:hover{
   transform: scale(1.1);
 }
 
-  /*----SOCIALE MEDIER IKONER----*/
+/*----SOCIALE MEDIER IKONER----*/
 .social-icons{
   padding-top: 80px;
 }
@@ -473,125 +581,6 @@ form button:hover{
 
 
 
-/*----BURGER MENU I MOBILE VERSION----*/
-#menuToggle{
-  display: block;
-  position: relative;
-  float: right;
-  z-index: 1;
-}
-
-#menuToggle a{
-  text-decoration: none;
-  color: #232323;
-  transition: color 0.3s ease;
-}
-
-#menuToggle input{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /*skjul vores button*/
-  z-index: 2; /*og placer den ovenpå vores burger*/
-}
-
-/*----Burger menu----*/
-#menuToggle span{
-  display: block;
-  width: 33px;
-  height: 4px;
-
-  margin-right: 40px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #eeeee1;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2){
-  transform-origin: 0% 100%;
-}
-
-/*----Vi laver burgeren om til et kryds----*/
-#menuToggle input:checked ~ span{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #464a38;
-}
-
-/*----Vi skjuler stregen i midten----*/
-#menuToggle input:checked ~ span:nth-last-child(3){
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*----Sidste streg skal rotere modsat vej----*/
-#menuToggle input:checked ~ span:nth-last-child(2){
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-#menu
-{
-  position: absolute;
-  width: 300px;
-  height: 700px;
-  margin: -100px 0 0 -200px;
-  padding-top: 125px;
-  padding-right: 120px;
-  
-  background: #eeeee1;
-  list-style-type: none;
- 
-  
-  transform-origin: 0% 0%;
-  transform: translate(100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li{
-  padding: 10px 0;
-  font-size: 20px;
-}
-
-/*----Så den slider ind fra højre----*/
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*----ANIMATIONER & TRANSITIONS----*/
 /*----NAV ANIMATION----*/
@@ -599,7 +588,7 @@ form button:hover{
 	animation: puff-in-center 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
- @keyframes puff-in-center {
+@keyframes puff-in-center {
   0% {
     transform: scale(1);
     filter: blur(4px);
@@ -677,7 +666,7 @@ form button:hover{
   transform-origin: bottom left;
 }
 
-/*----BOOK BORD----*/
+/*----BOOK BORD ANIMATION----*/
  @keyframes tracking-in-expand {
   0% {
     letter-spacing: -0.7em;
@@ -700,22 +689,9 @@ form button:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*----RESPONSIVE----*/
 /*----LAPTOP----*/
-@media screen and (min-width: 1100px){
+@media screen and (min-width: 768px){
   #menuToggle span{
     display: none !important; 
   }
@@ -723,21 +699,19 @@ form button:hover{
   #menu{
     display: none;
   }
-
-  .instagram_app{display: none;}
-
-  .cardsection img{margin-right: 15px;}
-
 }
 
 
 
 
+
+
+
+
+
+
 /*----MOBIL----*/
-@media screen and (max-width:1100px){
-
-
-/*----HEADER----*/
+@media screen and (max-width:768px){
   header{
     justify-content:space-between ;
 }
@@ -755,110 +729,16 @@ form button:hover{
   height: 700px;
 }
 
-
-
 .slideshow_sectionINDEX{
   width: 100%;
-  height: 800px;
-  margin-bottom: -100px;
+  height: 600px;
   margin-top: -4px;
 }
 
 .slideshow_sectionINDEX img{
-  width: 163%;
+  width: 120%;
 }
 
-#logo{
-
-  text-align: center;
-  margin-right: 20%;
-}
-
-
-.cardsection{
-  justify-content: space-between;
-  flex-direction: column;
-  height: auto;
-  margin-bottom: -30px;
-  align-items: center;}
-  
-.cardsection div h1{
-  margin-top: 10px;
-  text-align: center;
-
-}
-
-.cardsection div p{
-text-align: center;
-padding: 20px;
-
-}
-
-.cardsection img{
-padding: 10px;
-margin-top: 0px;
-}
-
-/*---- MENU KORT INDEX ----*/
-
-.cardscontainer{
-  justify-content: space-between;
-  flex-direction: column;
-  height: auto;
-  align-items: center;}
-
-.cardscontainer{
-
-  justify-content: space-between;
-  height: auto;
-
-}
-
-.cardscontainer div{
-  flex-direction: column;
-  width: 80%;
-  height: 600px;
-  margin-bottom: 50px;
-
-}
-
-.cardscontainer a{
-
-  align-items: center;
-  margin-left: 8%;
-}
-
-
-/*----INSTAGRAM----*/
-.instagram_et{display: none;}
-.instagram_to{display:none;}
-.instagram_tre{display:none;}
-  
-.instagram_app{
-
-  margin:auto;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----FOOTER----*/
 .footer{
   flex-direction: column;
 }
@@ -866,7 +746,6 @@ margin-top: 0px;
 .footer :nth-child(1){order: 2;}
 .footer :nth-child(2){order: 1;}
 .footer :nth-child(3){order: 3;}
-
 
 #column-two{
   margin-bottom: 40px;
@@ -894,15 +773,5 @@ margin-top: 0px;
 .cardscontainer{
   flex-direction: column;
   align-items: center;
- 
-
 }
-
-
-
 }
-
-
-
-
-
